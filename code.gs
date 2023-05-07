@@ -1,3 +1,13 @@
+/**
+ * @fileOverview This script retrieves email data from a Google Sheet and sends follow-up emails to recipients 
+ * based on the number of days elapsed since the last follow-up, scheduling them for weekdays. It also allows 
+ * manual scheduling of follow-ups via a custom menu in a Google Sheets document. 
+ * 
+ * @author u/IAmMoonie
+ * @license MIT
+ * @version 1.0
+ */
+
 /* `const config` is an object that stores configuration data for the script. It contains two
 properties: `timeZone`, which is set to "America/New_York", and `spreadsheetId`, which is set to a
 specific Google Sheets spreadsheet ID. These properties are used throughout the script to specify
