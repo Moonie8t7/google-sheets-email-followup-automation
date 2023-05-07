@@ -17,10 +17,26 @@ To use this script, follow these steps:
 7. (Optional) Create a custom menu to run the scheduleFollowups() function more easily.
 
 ## Configuration
-The config object in the script contains two properties: timeZone and spreadsheetId. timeZone should be set to your local time zone, and spreadsheetId should be set to the ID of your Google Sheets document.
+The script uses an object config to store configuration data. The timeZone property is set to "America/New_York", and the spreadsheetId property is set to a specific Google Sheets spreadsheet ID. These properties are used throughout the script to specify the time zone and spreadsheet to be used. Make sure you modify these to suit your needs.
+
+## Code Explanation
+
+### Functions
+* getEmailsFromSheet() - retrieves email data from the Google Sheet.
+* updateSheet(row, followupNum, today) - updates a Google Sheets row with a follow-up number and today's date.
+* sendFollowupEmail(email, row) - sends a follow-up email with a specific body and schedules it to be sent on a weekday.
+* scheduleFollowups() - schedules follow-up emails for weekdays to the recipients listed in a Google Sheet.
+* daysBetween(date1, date2) - calculates the number of days between two given dates.
+* isWeekday(date) - checks if a given date is a weekday (Monday to Friday).
+* getRandomTime(date, timeZone) - generates a random time within a specified time zone.
+
+### Custom Menu
+The script creates a custom menu in a Google Sheets document with an option to schedule follow-ups.
 
 ## Usage
-To use this script, you can either run the scheduleFollowups() function manually or set up a trigger to run the function on a schedule. The function will send follow-up emails to the email addresses listed in the Google Sheets document, based on the number of days elapsed since the last follow-up.
+To use this script, you need to have a Google Sheet with email data and associated data in columns A through G, starting from row 2. You will also need to replace the timeZone and spreadsheetId values in the config object with your own.
+
+Once you have set up your Google Sheet and configured the script, you can either run the scheduleFollowups() function manually or set up a trigger to run the function on a schedule. The function will send follow-up emails to the email addresses listed in the Google Sheets document, based on the number of days elapsed since the last follow-up.
 
 ## License
 This script is licensed under the MIT License.
