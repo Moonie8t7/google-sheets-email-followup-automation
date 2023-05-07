@@ -3,7 +3,7 @@
  * based on the number of days elapsed since the last follow-up, scheduling them for weekdays. It also allows
  * manual scheduling of follow-ups via a custom menu in a Google Sheets document.
  *
- * @author u/IAmMoonie
+ * @author u/IAmMoonie <https://www.reddit.com/user/IAmMoonie/>
  * @license MIT
  * @version 1.0
  */
