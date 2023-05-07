@@ -16,8 +16,7 @@
  * @property {string} spreadsheetId - The ID of the Google Sheets spreadsheet to be used in the script.
  */
 const config = {
-  timeZone: "America/New_York",
-  // Replace with your timeZone
+  timeZone: "America/New_York", // Replace with your timeZone
   spreadsheetId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" // Replace with your Spreadsheet ID
 };
 /**
